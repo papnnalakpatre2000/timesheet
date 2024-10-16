@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Grading: Add Two Numbers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        h3 {
+            margin-top: 20px;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+<script>
+        function addNumbers() {
+            const num1 = parseFloat(document.getElementById('number1').value);
+            const num2 = parseFloat(document.getElementById('number2').value);
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+                const sum1 = num1+9;
+				const sum2 = num2+15;
+				if(sum2>=60){
+				sum1=sum1+1;
+				sum2=sum2-60;
+				}
+                document.getElementById('result').innerText =sum1+":"+sum2;
+            } else {
+                document.getElementById('result').innerText = 'Please enter valid numbers';
+            }
+        }
+    </script>
+    <div class="container">
+        <h2>Mobile Addition</h2>
+        
+        <label for="number1">Enter first number:</label>
+        <input type="number" id="number1" placeholder="First Number">
+        
+        <label for="number2">Enter second number:</label>
+        <input type="number" id="number2" placeholder="Second Number">
+        
+        <button onclick="addNumbers()">Add Numbers</button>
+        
+        <p id="result"></p>
+    </div>
+
+    
+
+</body>
+</html>
