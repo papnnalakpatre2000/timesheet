@@ -57,12 +57,12 @@
 <body>
 <script>
         function addNumbers() {
-            const num1 = parseFloat(document.getElementById('number1').value);
-            const num2 = parseFloat(document.getElementById('number2').value);
+            var num1 = parseFloat(document.getElementById('number1').value);
+            var num2 = parseFloat(document.getElementById('number2').value);
 
             if (!isNaN(num1) && !isNaN(num2)) {
-                const sum1 = num1+9;
-				const sum2 = num2+15;
+                var sum1 = num1+9;
+				var sum2 = num2+15;
 				if(sum2>=60){
 				sum1=sum1+1;
 				sum2=sum2-60;
